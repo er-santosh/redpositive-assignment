@@ -2,7 +2,7 @@ import cors from "cors";
 import express from "express";
 import { readdirSync } from "fs";
 import mongoose from "mongoose";
-import { errorHandler } from "./api/utils/errorHandler";
+import { errorHandler } from "./utils/errorHandler";
 const morgan = require("morgan");
 require("dotenv").config();
 /* create express app */
@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
 });
 
 readdirSync("./api/routes").map((route) =>
-  app.use("/api", require(`./api/routes/${route}`))
+  app.use("/api", require(`./routes/${route}`))
 );
 
 /* error handling middleware */

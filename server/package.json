@@ -1,14 +1,14 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "author": "Santosh Tharu",
   "license": "MIT",
   "engines": {
     "node": "18.x"
   },
   "scripts": {
-    "start": "nodemon -r esm server.js"
+    "start": "node -r esm api/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
