@@ -2,10 +2,9 @@ import cors from "cors";
 import express from "express";
 import { readdirSync } from "fs";
 import mongoose from "mongoose";
-import { errorHandler } from "./utils/errorHandler";
+import { errorHandler } from "./api/utils/errorHandler";
 const morgan = require("morgan");
 require("dotenv").config();
-
 /* create express app */
 const app = express();
 
@@ -33,8 +32,8 @@ app.get("/", (req, res) => {
   });
 });
 
-readdirSync("./routes").map((route) =>
-  app.use("/api", require(`./routes/${route}`))
+readdirSync("./api/routes").map((route) =>
+  app.use("/api", require(`./api/routes/${route}`))
 );
 
 /* error handling middleware */
