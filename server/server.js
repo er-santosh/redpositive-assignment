@@ -25,6 +25,14 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 /* routes */
+
+app.get("/", (req, res) => {
+  res.json({
+    status: 200,
+    message: "WELCOME TO DEMO API",
+  });
+});
+
 readdirSync("./routes").map((route) =>
   app.use("/api", require(`./routes/${route}`))
 );
