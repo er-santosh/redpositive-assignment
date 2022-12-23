@@ -16,4 +16,4 @@ router.put("/users/:_id", createUpdateUser);
 router.delete("/users/:_id", deleteUser);
 router.post("/sendEmail", sendEmail);
 
-module.exports = router;
+export default router;
