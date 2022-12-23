@@ -4,7 +4,7 @@ import { transporter } from "../utils/nodemailer";
 
 export const getAllUsers = async (req, res, next) => {
   try {
-    const users = await User.find();
+    const users = await User.find().sort({ createdAt: -1 });
     return res.json(users);
   } catch (error) {
     next(error);
