@@ -4,6 +4,9 @@
   "main": "server.js",
   "author": "Santosh Tharu",
   "license": "MIT",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "nodemon -r esm server.js"
   },
