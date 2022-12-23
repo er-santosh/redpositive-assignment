@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
   });
 });
 
-readdirSync("./api/routes").map((route) =>
+readdirSync("./routes").map((route) =>
   app.use("/api", require(`./routes/${route}`))
 );
 

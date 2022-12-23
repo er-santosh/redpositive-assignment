@@ -5,10 +5,10 @@
   "author": "Santosh Tharu",
   "license": "MIT",
   "engines": {
-    "node": "18.x"
+    "node": "18.12.1"
   },
   "scripts": {
-    "start": "node -r esm api/index.js"
+    "start": "node -r esm index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
